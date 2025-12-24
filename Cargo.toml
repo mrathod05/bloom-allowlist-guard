@@ -1,0 +1,16 @@
+[package]
+name = "bloom-allowlist-guard"
+description = "A high-throughput allowlist verification service for NFT mints and airdrops that uses in-memory Bloom filters to reject ineligible wallets before they impact the database."
+authors = ["mrathod05 <mrathod05@github>"]
+license = "MIT OR Apache-2.0"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+tokio = { version = "1", features = ["full"] }
+diesel = { version = "2.3.5", features = ["postgres"] }
+dotenv = "0.15"
+anyhow = "1.0"
+rand = "0.8.5"
+diesel-async = { version = "0.7.4", features = ["postgres", "pool", "deadpool"] }
+bloomfilter = "1.0.9"
